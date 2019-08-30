@@ -3,7 +3,7 @@ const pxtoviewport = require('postcss-px-to-viewport');
 
 module.exports = {
   outputDir: 'dist',
-  publicPath: '/',
+  publicPath: 'https://raw.githubusercontent.com/nikolausliu/components-repo/gh-pages/',
   css: {
     loaderOptions: {
       postcss: {
