@@ -12,15 +12,51 @@ const routes = [
     name: 'home',
     component: () => import('./view/home'),
     meta: {
-      title: '级联选择器demo'
-    }
-  }
+      title: 'components'
+    },
+    path: '/home'
+  },
+  {
+    name: 'demo',
+    component: () => import('./view/demo'),
+    meta: {
+      title: 'demo'
+    },
+    path: '/demo',
+    children: [
+      {
+        name: 'cascader',
+        component: () => import('./view/cascader'),
+        meta: {
+          title: 'cascader 级联选择器'
+        },
+        path: 'cascader'
+      }
+    ]
+  },
+  // {
+  //   name: 'cascader',
+  //   component: () => import('./view/cascader'),
+  //   meta: {
+  //     title: 'cascader 级联选择器'
+  //   }
+  // },
 ];
 
 // add route path
-routes.forEach(route => {
-  route.path = route.path || '/' + (route.name || '');
-});
+// const routesIterator = route => {
+//   if(route.hasOwnProperty('children') && route.children.length) {
+//     route.path = route.path || '/' + (route.name || '');
+//     routesIterator(route.children);
+//   } else {
+//     route.path = route.path || '/' + (route.name || '');
+//   }
+// };
+// // routes.forEach(route => {
+// //   route.path = route.path || '/' + (route.name || '');
+// // });
+// routes.forEach(routesIterator);
+// console.log(routes);
 
 const router = new Router({ routes });
 
