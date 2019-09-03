@@ -170,7 +170,7 @@ export default {
         });
         this.$emit("input", this.localValue);
       }
-    }
+    },
   }
 };
 </script>

@@ -26,7 +26,7 @@ const routes = [
     children: [
       {
         name: 'cascader',
-        component: () => import('./view/cascader'),
+        component: () => import('./view/demo/cascader'),
         meta: {
           title: 'cascader 级联选择器'
         },

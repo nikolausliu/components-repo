@@ -24,7 +24,7 @@
       <v-cascader title="配送至" v-model="value" :options="areaData" @select-done="onSelectDone"></v-cascader>
     </van-popup>
     <van-popup position="bottom" v-model="cascaderVisible2">
-      <v-cascader title="配送至" v-model="value2" :options="areaData" @select-done="onSelectDone2" menu-active-class="menu-on" item-active-class="item-on" :radius="false"></v-cascader>
+      <v-cascader ref="cascader2" title="配送至" v-model="value2" :options="areaData" @select-done="onSelectDone2" menu-active-class="menu-on" item-active-class="item-on" :radius="false"></v-cascader>
     </van-popup>
   </div>
 </template>
